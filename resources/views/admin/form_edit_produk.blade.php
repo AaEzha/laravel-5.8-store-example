@@ -8,7 +8,7 @@
 			<div class="card p-3">
 				<form action="{{ url('/simpan_edit_produk') }}" method="POST" enctype="multipart/form-data">
 				@csrf
-				
+
 				<div>
 					<label for="nama_produk">Nama Produk</label>
 					<input type="text" name="nama_produk" id="nama_produk" value="{{$daftar->nama_produk}}" class="form-control"><br>

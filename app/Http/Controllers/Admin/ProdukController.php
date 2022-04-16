@@ -18,7 +18,18 @@ class ProdukController extends Controller
     }
 
     public function simpan_input_produk(Request $simpan){
-        dd($simpan);
+        // validasi
+        // $simpan->validate([
+        //     'nama_produk' => 'required',
+        //     'stok' => 'required|numeric',
+        //     'kategori' => 'required',
+        //     'harga' => 'required|numeric',
+        //     'berat_produk' => 'required',
+        //     'tanggal_kadaluwarsa' => 'required|date_format:Y-m-d',
+        //     'deskripsi' => 'required',
+        //     'foto' => 'required',
+        // ]);
+
     	$nama_produk = $simpan->nama_produk;
     	$stok = $simpan->stok;
     	$kategori = $simpan->kategori;
@@ -45,13 +56,13 @@ class ProdukController extends Controller
     		'masa_penyimpanan' => $masa_penyimpanan,
     		'tanggal_kadaluwarsa' => $tanggal_kadaluwarsa,
     		'deskripsi' => $deskripsi,
-    		'foto' => $foto
+    		'foto' => $nama_file
     	];
 
     	DB::table('produk')
     		->insert($simpan_produk);
 
-    	return redirect(url('/list_produk'));
+    	return redirect(route('list_produk'));
     }
 
     public function list_produk(){
@@ -66,7 +77,7 @@ class ProdukController extends Controller
         DB::table('produk')
                 ->where('produk_id',$produk_id)
                 ->delete();
-        return redirect('/list_produk');
+        return redirect(route('list_produk'));
     }
 
     public function edit_produk($produk_id){

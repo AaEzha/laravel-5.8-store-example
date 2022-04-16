@@ -21,13 +21,13 @@ Route::group(['middleware' => ['auth'], 'namespace' => 'Admin', 'prefix' => 'adm
 	Route::get('/dashboard', 'DashboardController@index');
 
 	Route::get('/input_produk', 'ProdukController@input_produk');
-	Route::post('/simpan_input_produk', 'ProdukController@simpan_input_produk');
-	Route::get('/list_produk', 'ProdukController@list_produk');
-	Route::get('/delete_produk/{produk_id}', 'ProdukController@delete_produk');
-	Route::get('/edit_produk/{produk_id}', 'ProdukController@edit_produk');
-	Route::post('/simpan_edit_produk', 'ProdukController@simpan_edit_produk');
+	Route::post('/simpan_input_produk', 'ProdukController@simpan_input_produk')->name('simpan_input_produk');
+	Route::get('/list_produk', 'ProdukController@list_produk')->name('list_produk');
+	Route::get('/delete_produk/{produk_id}', 'ProdukController@delete_produk')->name('delete_produk');
+	Route::get('/edit_produk/{produk_id}', 'ProdukController@edit_produk')->name('edit_produk');
+	Route::post('/simpan_edit_produk', 'ProdukController@simpan_edit_produk')->name('simpan_edit_produk');
 
-	Route::get('/pesan_produk', 'PesanController@pesan_produk');
+	Route::get('/pesan_produk', 'PesanController@pesan_produk')->name('pesan_produk');
 
 });
 

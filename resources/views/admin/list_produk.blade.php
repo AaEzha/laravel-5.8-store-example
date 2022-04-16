@@ -48,7 +48,7 @@
 							<td>{{ $item->tanggal_kadaluwarsa }}</td>
 							<td>{{ $item->deskripsi }}</td>
 							<td class="text-center">
-								<a href="/delete_produk/{{$item->produk_id}}" class="btn btn-sm btn-danger" onclick="return confirm('Apakah Anda Yakin Akan Menghapus Produk Ini?')">Hapus</a>
+								<a href="{{ route('delete_produk', $item->produk_id) }}" class="btn btn-sm btn-danger" onclick="return confirm('Apakah Anda Yakin Akan Menghapus Produk Ini?')">Hapus</a>
 								<a href="/admin/edit_produk/{{$item->produk_id}}" class="btn btn-sm btn-info" onclick="return confirm('Apakah Anda Yakin Akan Mengedit Produk Ini?')">Edit</a>
 								<a class="btn btn-sm btn-warning" data-toggle="modal" data-target="#myModal{{ $item->produk_id }}">Detail</a>
 							</td>
