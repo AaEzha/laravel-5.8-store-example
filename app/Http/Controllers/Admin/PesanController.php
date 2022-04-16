@@ -11,11 +11,11 @@ class PesanController extends Controller
         $this->middleware('auth');
     }
 
-    public function pesan_produk(Request $detail){
-    	$produk_id = $detail->produk_id;
+    public function pesan_produk($id){
+    	// $produk_id = $detail->produk_id;
     	$daftar_produk = DB::table('produk')
                 		->select('*')
-                		->where('produk_id', $produk_id)
+                		->where('produk_id', $id)
                 		->first();
         return view('admin.pesan_produk', compact('daftar_produk'));
     }

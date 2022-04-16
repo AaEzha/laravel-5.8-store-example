@@ -27,7 +27,7 @@ Route::group(['middleware' => ['auth'], 'namespace' => 'Admin', 'prefix' => 'adm
 	Route::get('/edit_produk/{produk_id}', 'ProdukController@edit_produk')->name('edit_produk');
 	Route::post('/simpan_edit_produk', 'ProdukController@simpan_edit_produk')->name('simpan_edit_produk');
 
-	Route::get('/pesan_produk', 'PesanController@pesan_produk')->name('pesan_produk');
+	Route::get('/pesan_produk/{id}', 'PesanController@pesan_produk')->name('pesan_produk');
 
 });
 

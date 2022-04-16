@@ -10,96 +10,48 @@
             <div>
               <label for="nama_produk">Nama Produk</label>
               <input type="text" name="nama_produk" id="nama_produk"
-                class="form-control @error('nama_produk') is-invalid @enderror" value="{{ old('nama_produk') }}">
-              @error('nama_produk')
-                <div class="invalid-feedback">
-                  {{ $message }}
-                </div>
-              @enderror
+                class="form-control">
               <br>
 
               <label for="stok">Stok</label>
-              <input type="number" name="stok" id="stok" class="form-control @error('stok') is-invalid @enderror"
-                value="{{ old('stok') }}">
-              @error('stok')
-                <div class="invalid-feedback">
-                  {{ $message }}
-                </div>
-              @enderror
+              <input type="number" name="stok" id="stok" class="form-control">
               <br>
 
               <label for="kategori">Kategori</label>
-              <select name="kategori" id="kategori" class="form-control @error('kategori') is-invalid @enderror">
+              <select name="kategori" id="kategori" class="form-control">
                 <option value="">Pilih Kategori</option>
-                <option value="Skin Care" @if (old('kategori') == 'Skin Care') selected @endif>Skin Care</option>
-                <option value="Cosmetics" @if (old('kategori') == 'Cosmetics') selected @endif>Cosmetics</option>
-                <option value="Lip Products" @if (old('kategori') == 'Lip Products') selected @endif>Lip Products</option>
+                <option value="Skin Care">Skin Care</option>
+                <option value="Cosmetics">Cosmetics</option>
+                <option value="Lip Products">Lip Products</option>
               </select>
-              @error('kategori')
-                <div class="invalid-feedback">
-                  {{ $message }}
-                </div>
-              @enderror
               <br>
 
               <label for="harga">Harga</label>
-              <input type="number" name="harga" id="harga" class="form-control @error('harga') is-invalid @enderror"
-                value="{{ old('harga') }}">
-              @error('harga')
-                <div class="invalid-feedback">
-                  {{ $message }}
-                </div>
-              @enderror
+              <input type="number" name="harga" id="harga" class="form-control">
               <br>
 
               <label for="berat_produk">Berat Produk</label>
               <input type="text" name="berat_produk" id="berat_produk"
-                class="form-control @error('berat_produk') is-invalid @enderror" value="{{ old('berat_produk') }}">
-              @error('berat_produk')
-                <div class="invalid-feedback">
-                  {{ $message }}
-                </div>
-              @enderror
+                class="form-control">
               <br>
 
               <label for="masa_penyimpanan">Masa Penyimpanan</label>
               <input type="text" name="masa_penyimpanan" id="masa_penyimpanan"
-                class="form-control @error('masa_penyimpanan') is-invalid @enderror" value="{{ old('masa_penyimpanan') }}">
-              @error('masa_penyimpanan')
-                <div class="invalid-feedback">
-                  {{ $message }}
-                </div>
-              @enderror
+                class="form-control">
               <br>
 
               <label for="tanggal_kadaluwarsa">Tanggal Kadaluwarsa</label>
               <input type="date" name="tanggal_kadaluwarsa" id="tanggal_kadaluwarsa"
-                class="form-control @error('tanggal_kadaluwarsa') is-invalid @enderror"
-                value="{{ old('tanggal_kadaluwarsa') }}">
-              @error('tanggal_kadaluwarsa')
-                <div class="invalid-feedback">
-                  {{ $message }}
-                </div>
-              @enderror
+                class="form-control">
               <br>
 
               <label for="deskripsi">Deskripsi</label>
               <input type="text" name="deskripsi" id="deskripsi"
-                class="form-control @error('deskripsi') is-invalid @enderror" value="{{ old('deskripsi') }}">
-              @error('deskripsi')
-                <div class="invalid-feedback">
-                  {{ $message }}
-                </div>
-              @enderror
+                class="form-control">
               <br>
 
               <label for="foto">Foto</label></th>
-              <input type="file" name="foto" id="foto" class="form-control @error('foto') is-invalid @enderror">
-              @error('foto')
-                <div class="invalid-feedback">
-                  {{ $message }}
-                </div>
-              @enderror
+              <input type="file" name="foto" id="foto" class="form-control">
               <br><br>
 
               {{-- <button type="submit" id="submit_input" name="submit_input" class="btn btn-md btn-primary mt-3">Input Produk</button> --}}

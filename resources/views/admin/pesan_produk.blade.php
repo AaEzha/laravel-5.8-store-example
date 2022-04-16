@@ -12,7 +12,7 @@
 					<div class="card-body">
 						<div class="row">
 							<div class="col-md-6">
-								<img src="{{ url('upload_file') }}/{{ $item->foto }}" class="rounded mx-auto d-block" width="100%" alt="">
+								<img src="{{ url('upload_file') }}/{{ $daftar_produk->foto }}" class="rounded mx-auto d-block" width="100%" alt="">
 							</div>
 							<div class="col-md-6 mt-6">
 								<h3>{{ $daftar_produk->nama_produk }}</h3>
